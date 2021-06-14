@@ -1,0 +1,57 @@
+.CloudElement{
+  position: absolute;
+  span{
+    color: #ffffff;
+    width: 150px;
+    height: 150px;
+    padding: 60px 25px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    color: #ffffff;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+  }
+  span:hover{
+    width: 200px;
+    height: 200px;
+    font-size: 15px;
+    padding: 85px 25px;
+    font-size: 20px;
+    top: -100px;
+    left: -100px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .CloudElementsWrapper {
+    animation: spin infinite 20s linear;
+  }
+  .CloudElement {
+    animation: neg-spin infinite 20s linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neg-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+  
