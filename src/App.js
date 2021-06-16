@@ -1,49 +1,55 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./Home/Home";
-import NavBar from "./NavBar";
+import { BrowserRouter} from "react-router-dom";
+import Header from "./Header";
+import PageContent from "./PageContent";
 import './Styles/Addon.scss';
-import Profile from "./Profile/Profile";
+import Home from "./Home";
+import Profile from "./Profile";
+import { useEffect, useState } from "react";
 
 function App() {
   const tabs = [
     {
       name:"home",
       URL:"/home",
-      display:"Home"
+      display:"Home",
+      component: Home
     },
     {
       name:"profile",
       URL:"/profile",
-      display:"Profile"
-    },
-    {
-      name:"professional",
-      URL:"/professional",
-      display:"Professional"
-    },
-    {
-      name:"personal",
-      URL:"/personal",
-      display:"Personal"
+      display:"Profile",
+      component: Profile
     }
   ];
+
+  const [ pageState, setPageState] = useState(false);
+
+  const setPageHeader = (position, padding, pageState) =>{
+    setPageState(pageState);
+    document.getElementById("page-header").style.position = position;
+    document.getElementById("page-content").style.paddingTop = padding;
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", ()=>{
+      if(window.scrollY >= 180){
+        setPageHeader("fixed", "250px", true);
+      }
+      if(window.scrollY < 180){
+        setPageHeader("initial", "0px", false);
+      }
+    })
+  }, [])
+
   return (
     <div className="App">
-    <BrowserRouter>
-      <div className="PageHeader">
-        <div className="Logo">
-          <div className="LogoInitials">VC</div><br/>
-          <div className="LogoName">Vibin Chakravarthy</div>
-        </div>
-        <NavBar tabs={tabs}/>
-      </div>
-      <Switch>
-        <Route path="/home" component={Home}/>
-        <Route path="/profile" component={Profile}/>
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header tabs={tabs} pageState={pageState}/>
+        <PageContent tabs={tabs}/>
+      </BrowserRouter>
     </div>
   );
+
 }
 
 export default App;
