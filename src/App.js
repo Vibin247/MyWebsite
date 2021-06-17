@@ -36,7 +36,7 @@ function App() {
         setPageHeader("fixed", "250px", true);
       }
       if(window.scrollY < 180){
-        setPageHeader("initial", "0px", false);
+        setPageHeader("initial", "25px", false);
       }
     })
   }, [])

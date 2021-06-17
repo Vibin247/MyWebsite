@@ -1,0 +1,26 @@
+.font-cedarville{
+    font-family: 'Cedarville Cursive';
+}
+
+.header-name-font{
+    @extend .font-cedarville;
+    font-size: $header-name-font;
+    color: $header-font-color;
+}
+
+.display-inline-block{
+    display: inline-block !important;
+}
+
+$align: left, center, right;
+
+@each $item in $align {
+    .text-align-#{$item}{
+        text-align: $item;
+    }
+}
+
+.text-center-justify{
+    justify-content: center;
+    text-align: justify;
+}
