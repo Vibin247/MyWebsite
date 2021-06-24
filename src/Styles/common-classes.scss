@@ -24,3 +24,17 @@ $align: left, center, right;
     justify-content: center;
     text-align: justify;
 }
+
+.text-bold{
+    font-weight: bold;
+}
+
+.tall-text-lines{
+    line-height: 1.5;
+}
+
+.article{
+    p{
+        margin-bottom: 10px;
+    }
+}

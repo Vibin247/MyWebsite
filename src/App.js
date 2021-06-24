@@ -1,52 +1,45 @@
-import { BrowserRouter} from "react-router-dom";
-import Header from "./Header";
-import PageContent from "./PageContent";
-import './Styles/Addon.scss';
-import Home from "./Home";
-import Profile from "./Profile";
+import Header from "./NavBar/Header";
+import PageContent from "./Common/PageContent";
 import { useEffect, useState } from "react";
+import { tabs } from "./configurations/tabs";
+import scroll from "./js/scroll";
+import './Styles/Addon.scss';
 
 function App() {
-  const tabs = [
-    {
-      name:"home",
-      URL:"/home",
-      display:"Home",
-      component: Home
-    },
-    {
-      name:"profile",
-      URL:"/profile",
-      display:"Profile",
-      component: Profile
-    }
-  ];
 
-  const [ pageState, setPageState] = useState(false);
+  const [ headerState, setHeaderState] = useState(false);
 
-  const setPageHeader = (position, padding, pageState) =>{
-    setPageState(pageState);
+  const setPageHeader = (position, headerState) =>{
+    setHeaderState(headerState);
     document.getElementById("page-header").style.position = position;
-    document.getElementById("page-content").style.paddingTop = padding;
   }
 
+  const setSectionsHeight = () => {
+    const sections = document.getElementsByTagName("section");
+    for (let index = 0; index < sections.length; index++) {
+      sections[index].style.minHeight = window.innerHeight + "px";
+    }
+  }
   useEffect(() => {
+    setSectionsHeight();
+    const togglePageHeader = () => {
+      if(window.scrollY >= window.innerHeight-250){
+        setPageHeader("fixed", true);
+      }
+      if(window.scrollY < (window.innerHeight-250)/2){
+        setPageHeader("initial", false);
+      }
+    }
     window.addEventListener("scroll", ()=>{
-      if(window.scrollY >= 180){
-        setPageHeader("fixed", "250px", true);
-      }
-      if(window.scrollY < 180){
-        setPageHeader("initial", "25px", false);
-      }
+      togglePageHeader();
+      scroll.pageNavigator(tabs, headerState);
     })
   }, [])
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header tabs={tabs} pageState={pageState}/>
-        <PageContent tabs={tabs}/>
-      </BrowserRouter>
+      <Header tabs={tabs} headerState={headerState}/>
+      <PageContent tabs={tabs}/>
     </div>
   );
 

@@ -1,9 +1,9 @@
-import HomeInfo from "./Home/HomeInfo";
+import HomeInfo from "../Home/HomeInfo";
 
 export default function Home(){
     return (
-        <div className="home-page">
+        <section className="home-page">
             <HomeInfo src="./images/MyFace.png"/>
-        </div>
+        </section>
     );
 }
