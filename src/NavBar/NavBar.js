@@ -4,14 +4,7 @@ export default function NavBar(props){
 
     const handleNavClick = (event) => {
         const pageid = event.target.id.substr(0, event.target.id.indexOf("-"));
-        const scrollHeight = document.getElementById(pageid).offsetTop;
-        window.scroll({
-            top: scrollHeight,
-            behavior: 'smooth'
-        });
-        setTimeout(() => {
-            scroll.highlightTabName(pageid);
-        }, 500);
+        scroll.scrollToPage(pageid);
     }
     return (
         <div className="nav-bar">

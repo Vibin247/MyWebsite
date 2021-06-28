@@ -21,9 +21,22 @@ function highlightTabName(name) {
     }
 }
 
+function scrollToPage(pageid) {
+
+    const scrollHeight = document.getElementById(pageid).offsetTop;
+    window.scroll({
+        top: scrollHeight,
+        behavior: 'smooth'
+    });
+    setTimeout(() => {
+        highlightTabName(pageid);
+    }, 500);    
+}
+
 const scroll = {
     pageNavigator,
-    highlightTabName
+    highlightTabName,
+    scrollToPage
 }
 
 export default scroll;

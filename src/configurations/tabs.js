@@ -1,24 +1,27 @@
 import Home from "./../Pages/Home";
 import Profile from "./../Pages/Profile";
 import Professional from "./../Pages/Professional";
+import Skills from "../Pages/Skills";
 
 export const tabs = [
     {
       name:"home",
-      URL:"/home",
       display:"Home",
       component: Home
     },
     {
       name:"profile",
-      URL:"/profile",
       display:"Profile",
       component: Profile
     },
     {
       name:"professional",
-      URL:"/professional",
-      display:"Professional",
+      display:"Experience",
       component: Professional
+    },
+    {
+      name:"skills",
+      display:"Skills",
+      component: Skills
     }
 ];

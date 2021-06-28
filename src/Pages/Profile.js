@@ -34,11 +34,6 @@ export default function Profile(){
             value: "+91 96778 88433"
         },
         {
-            name: "LinkedIn profile",
-            value: "VibinChakravarthy",
-            URL: "https://www.linkedin.com/in/vibinchakravarthy/"
-        },
-        {
             name: "Address",
             value: "Chennai, TN 600029"
         }
@@ -48,9 +43,8 @@ export default function Profile(){
             <div className="profile-page">
                 <div className="content-header">Profile</div>
                 
-                <div className="sub-header">Profile Summary</div>
-                <div className ="details-table">
-                    <div className="text-center-justify text-align-left">
+                <div className ="content" style={{padding:"0px"}}>
+                    <div className="tall-text-lines text-center-justify text-align-left">
                         Enthusiastic Software Developer eager to contribute to team success through smart work, attention to detail and excellent problem-solving skills.
                         Self-motivated and natural programmer with 3 years of professional experience in web client development.
                         Highly skilled in various programming languages, including but not limited to HTML, JavaScript, Ember.js

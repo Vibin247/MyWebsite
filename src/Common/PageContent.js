@@ -4,7 +4,7 @@ export default function PageContent(props){
     <div id="page-content" className="page-content">
       {tabs.map((tab) => (
         <div id={tab.name} key={tab.name}>
-          <tab.component/>
+          <tab.component tabs={tabs}/>
         </div>
       ))}
     </div>    
