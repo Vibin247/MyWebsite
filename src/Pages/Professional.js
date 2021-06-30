@@ -16,7 +16,7 @@ export default function Professional(){
 
     return (
         <section>
-            <div className="professional-page text-align-center">
+            <div className="professional-page tab-section">
                 <div className="content-header">Professional experience</div>
                 <div className="experience-wrapper">
                     {

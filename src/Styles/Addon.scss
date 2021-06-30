@@ -3,6 +3,7 @@
 @import "animation.scss";
 @import "star.scss";
 @import "experience.scss";
+@import "forms.scss";
 
 body {
     margin: 0;
@@ -54,6 +55,16 @@ body {
     }
 }
 
+section{
+    padding: 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    div{
+        display: block;
+    }
+}
+
 .page-content{
     background-color: $page-bg;
     .content-header{
@@ -61,6 +72,16 @@ body {
         font-weight: 600;
         margin-bottom: $header-font;
     }
+}
+
+.page-content > div:nth-child(odd){
+    background-color: $odd-section-bg;
+    color: $odd-section-font;
+}
+
+.page-content > div:nth-child(even){
+    background-color: $even-section-bg;
+    color: $even-section-font;
 }
 
 .home-page{
@@ -96,17 +117,6 @@ body {
     }
 }
 
-.sub-header{
-    @extend .text-align-left;
-    font-size: $sub-header-font;
-    margin-bottom: 20px;
-}
-.profile-page, .professional-page, .skills-page{
-    @extend .text-align-center;
-    margin: 0 auto;
-    width: 85%;
-}
-
 .professional-page{
     .sub-header > div{
         margin: 10px 0px;
@@ -117,6 +127,7 @@ body {
     }
 }
 
+
 .content{
     margin: 0px auto 30px;
     padding: 0px 20px;
@@ -126,24 +137,6 @@ body {
         display: flex;
         justify-content: space-between;
     }
-}
-
-section{
-    display: flex;
-    align-items: center;
-    div{
-        display: block;
-    }
-}
-
-.page-content > div:nth-child(odd){
-    background-color: $odd-section-bg;
-    color: $odd-section-font;
-}
-
-.page-content > div:nth-child(even){
-    background-color: $even-section-bg;
-    color: $even-section-font;
 }
 
 .table{
@@ -199,5 +192,13 @@ section{
 .scroll-down-buttons:hover{
     .scroll-down:nth-child(2):hover{
         bottom: 190px;
+    }
+}
+
+#contact-form{
+    width: 500px;
+    margin: 0 auto;
+    *{
+        width: 100%;
     }
 }

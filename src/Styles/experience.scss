@@ -69,3 +69,36 @@
         }
     }
 }
+
+.page-content > div:nth-child(odd)#skills{
+    .skill-ratings-collection{
+        border: 1px solid $even-section-bg;        
+    }
+}
+.page-content > div:nth-child(even)#skills{
+    .skill-ratings-collection{
+        border: 1px solid $odd-section-bg;
+    }
+}
+.skill-ratings-collection{
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 20px;
+    .collection-heading{
+        margin-bottom: 20px;
+    }
+    .skill-ratings-wrapper{
+        display: flex;
+        align-items: center;
+        .skill-ratings{
+            box-sizing: border-box;
+            min-width: 300px;
+            .skill-name{
+                margin-bottom: 15px;
+            }
+            .skill-stars{
+                margin-top: 15px;
+            }
+        }        
+    }
+}

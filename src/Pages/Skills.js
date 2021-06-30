@@ -1,86 +1,157 @@
-import DetailsTable from "../Common/DetailsTable";
-import Stars from "../Common/Stars";
+import SkillRatings from "../Common/SkillRatings";
 
 export default function Skills() {
     
+    const markUpAndStyles = [
+        {
+            name: "HTML",
+            component: SkillRatings,
+            props : { 
+                stars: 4,
+                imagename:"HTML5.png" 
+            }
+        },
+        {
+            name: "CSS",
+            component: SkillRatings,
+            props : { 
+                stars:4,
+                imagename:"CSS3.png"
+            }
+        },
+        {
+            name: "LESS",
+            component: SkillRatings,
+            props : { 
+                stars:4,
+                imagename:"LESS.svg"
+            }
+        },
+        {
+            name: "SASS",
+            component: SkillRatings,
+            props : { 
+                stars:4,
+                imagename:"SASS.svg"
+            }
+        }
+
+    ];
+
     const frontEndSkills = [
         {
             name: "Javascript",
-            component: Stars,
-            props : { stars: 4 }
-        },
-        {
-            name: "HTML",
-            component: Stars,
-            props : { stars: 4 }
-        },
-        {
-            name: "CSS, LESS, SASS",
-            component: Stars,
-            props : { stars: 4 }
+            component: SkillRatings,
+            props : { 
+                stars: 4,
+                imagename:"JS.svg" 
+            }
         },
         {
             name: "Ember.js",
-            component: Stars,
-            props : { stars: 4 }
+            component: SkillRatings,
+            props : { 
+                stars:4,
+                imagename:"Ember.svg"
+            }
         },
         {
             name: "JQuery",
-            component: Stars,
-            props : { stars: 3 }
+            component: SkillRatings,
+            props : { 
+                stars:3,
+                imagename:"JQuery.png"
+            }
         },
         {
             name: "React",
-            component: Stars,
-            props : { stars: 2 }
+            component: SkillRatings,
+            props : { 
+                stars:2 ,
+                imagename:"React.png"
+            }
         }
     ];
 
     const otherTechSkills = [
         {
-            name: "OOPS & DataStructures",
-            component: Stars,
-            props : { stars: 4 }
-        },
-        {
             name: "C++",
-            component: Stars,
-            props : { stars: 3 }
+            component: SkillRatings,
+            props : { 
+                stars:3 ,
+                imagename:"C++.png"
+            }
         },
         {
             name: "Java",
-            component: Stars,
-            props : { stars: 3 }
+            component: SkillRatings,
+            props : { 
+                stars:3 ,
+                imagename:"Java.png"
+            }
         },
         {
-            name: "SQL (PostgreSQL)",
-            component: Stars,
-            props : { stars: 3 }
+            name: "PostgreSQL (SQL)",
+            component: SkillRatings,
+            props : { 
+                stars:3 ,
+                imagename:"PGSQL.jpg"
+            }
         },
         {
             name: "Unity",
-            component: Stars,
-            props : { stars: 3 }
+            component: SkillRatings,
+            props : { 
+                stars:3 ,
+                imagename:"unity.png"
+            }
         },
         {
             name: "C#",
-            component: Stars,
-            props : { stars: 2 }
+            component: SkillRatings,
+            props : { 
+                stars:2 ,
+                imagename:"Csharp.png"
+            }
         }
     ];
 
     return (
-        <section>
-            <div className="skills-page">
-                <div className="content-header">Skills</div>
+        <section>   
+            <div className="skills-page tab-section">
+                <div className="content-header">Technical Skills</div>
                 
                 
-                <div className="table">
-                    <div className="table-col" style={{"width":"75%"}}>
-                        <DetailsTable details={frontEndSkills}/>
-                    {/* </div>
-                    <div className="table-col"> */}
-                        <DetailsTable details={otherTechSkills}/>
+                <div className="content">
+                    <div className="skill-ratings-collection">
+                        <div className="collection-heading">
+                            Markup language and Style sheets
+                        </div>
+                        <div className="skill-ratings-wrapper">
+                            {markUpAndStyles.map((skill) => (
+                                <SkillRatings key={skill.name} data={skill}/>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="skill-ratings-collection">
+                        <div className="collection-heading">
+                            Javascript and JS frameworks
+                        </div>
+                        <div className="skill-ratings-wrapper">
+                        {frontEndSkills.map((skill) => (
+                            <SkillRatings key={skill.name} data={skill}/>
+                        ))}
+                        </div>
+                    </div>
+                    <div className="skill-ratings-collection">
+                        <div className="collection-heading">
+                            Programming languages and Packages
+                        </div>
+                        <div className="skill-ratings-wrapper">
+                            {otherTechSkills.map((skill) => (
+                                <SkillRatings key={skill.name} data={skill}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

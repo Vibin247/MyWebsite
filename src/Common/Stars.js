@@ -13,7 +13,7 @@ export default function Stars(props) {
     }
 
     return (
-        <div>
+        <div className={props.className}>
             {genStars()}
         </div>
     );

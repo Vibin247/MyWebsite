@@ -1,6 +1,8 @@
 $primary-color: #08083b;
 $secondary-color: #ffffff;
 $font-color: #ffffff;
+$secondary-font-color: #08083b;
+$text-size: 20px;
 
 $header-bg: $primary-color;
 $header-font-color:$secondary-color;
@@ -16,10 +18,22 @@ $even-section-bg: $secondary-color;
 $odd-section-font: $secondary-color;
 $even-section-font: $primary-color;
 
-$text-size: 20px;
 
 $header-font: 35px;
 $sub-header-font: 25px;
 
 
 $link-hover-color: #c9c9c9;
+
+
+$input-background: #ffffff;
+$input-border: #c9c9c9;
+
+$active-input-border: #d9d9d9;
+$active-input-shadow: #f9f9f9;
+
+$input-width: 300px;
+$input-height: 35px;
+
+$placeholder-color: #aaaaaa;
+$input-size: 15px;

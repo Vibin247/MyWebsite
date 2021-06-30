@@ -23,24 +23,9 @@ export default function Profile(){
             value: "English, Tamil"
         }
     ];
-    const contactDetails = [
-        {
-            name: "E-mail address",
-            value: "vibin24796@outlook.com",
-            emailto: "vibin24796@outlook.com"
-        },
-        {
-            name: "Phone number",
-            value: "+91 96778 88433"
-        },
-        {
-            name: "Address",
-            value: "Chennai, TN 600029"
-        }
-    ]
     return (
         <section>
-            <div className="profile-page">
+            <div className="profile-page tab-section">
                 <div className="content-header">Profile</div>
                 
                 <div className ="content" style={{padding:"0px"}}>
@@ -54,8 +39,24 @@ export default function Profile(){
                 <div className="sub-header">Personal Info</div>
                 <DetailsTable details={profileDetails}/>
 
-                <div className="sub-header">Contact Details</div>
-                <DetailsTable details={contactDetails}/>
+                <div className="sub-header">Favourite Quote</div>
+                <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
+                    <b>"Education is the most powerful weapon which you can use to change the world."</b> - <i>Nelson Mandela</i>
+                </div>
+                <div className="sub-header">Favourite Books</div>
+                <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
+                    <div>
+                        <div><b>The Godfather</b> - <i>Mario Puzo</i></div>
+                        <div><b>Wiseguy: Life in a Mafia Family</b> - <i>Nicholas Pileggi</i></div>
+                    </div>
+                </div>
+                <div className="sub-header">Things I am passionate about</div>
+                <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
+                    <div>
+                        <div><b>Video Games</b> - <i>Counter Strike Global Offensive | Withcer | Far Cry</i> <br/></div>
+                        <div><b>Movies</b> - <i>Mani Ratnam | Martin Scorsese | Zack Snyder</i></div>
+                    </div>
+                </div>
             </div>
         </section>
     );

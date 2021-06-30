@@ -38,3 +38,15 @@ $align: left, center, right;
         margin-bottom: 10px;
     }
 }
+
+.tab-section{
+    @extend .text-align-center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.sub-header{
+    @extend .text-align-left;
+    font-size: $sub-header-font;
+    margin-bottom: 20px;
+}
