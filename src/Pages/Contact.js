@@ -4,13 +4,24 @@ import { ReactComponent as LinkedIn } from '../SVGs/linkedin.svg';
 import { ReactComponent as Github } from '../SVGs/github.svg';
 import { ReactComponent as HackerRank } from '../SVGs/hackerrank.svg';
 import scroll from "../js/scroll";
+import { apiKeys } from '../configurations/apikeys';
+import { useState } from 'react';
 
 export default function Contact(props) {
+
+    const [postingData, SetPostingData] = useState(false);
 
     const scrollToPage = () => {
         scroll.scrollToPage(props.tabs[0].name);
     };
 
+    const showAlert = (id) => {
+        document.getElementById(id).style.display = "block";
+        setTimeout(() => {
+            document.getElementById(id).style.display = "none";
+        }, 2500);
+        
+    };
     const phoneClick = () => {
         if (window.isMobile){
             const phoneNumberElement = document.createElement("a");
@@ -27,24 +38,23 @@ export default function Contact(props) {
             phoneNumberElement.select();
             document.execCommand('copy');
             document.body.removeChild(phoneNumberElement);
-            document.getElementById("phone-number-copied-alert").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("phone-number-copied-alert").style.display = "none";
-            }, 2500);
-            
+            showAlert("phone-number-copied-alert");
         }
     };
     
     const onFormSubmit = (event) => {
         event.preventDefault();
-
-        emailjs.sendForm("gmail", "portfolio_email", event.target, "user_a6vyvHCmFGwH9RA6zjpHP")
-        .then(() => {
-            document.getElementById("contact-form").reset();
+        const formData = {};
+        const formConfig = ["name","message","email_address"];
+        formConfig.map((element) => {
+            return formData[element] =  document.getElementById(element).value;
         });
-        window.scroll({
-            top: 0,
-            behavior: 'smooth'
+        SetPostingData(true);
+        emailjs.send("gmail", apiKeys.tempalte_id, formData, apiKeys.user_id)
+        .then(() => {
+            SetPostingData(false);
+            document.getElementById("contact-form").reset();
+            showAlert("message-sent-succesfully");
         });
     };
 
@@ -52,13 +62,13 @@ export default function Contact(props) {
         <section className="contact">
             <div className="text-align-center tab-section">
                 <div className="content-header">Contact</div>
-                <div className="content">I will get back to you at the earliest.</div>
+                <div className="content">Want to know more?</div>
                 <div className="content text-align-center">
                     <form id="contact-form" onSubmit={onFormSubmit}>
                         <input type="text" placeholder="Name" id="name"/>
                         <input type="text" placeholder="E-mail address" id="email_address"/>
                         <textarea placeholder="Message" id="message"/>
-                        <input type="submit" value="Send Message"/>
+                        <input type="submit" value="Send Message" disabled={postingData}/>
                     </form>
                 </div>
                 <div className="content contact-options">
@@ -68,7 +78,8 @@ export default function Contact(props) {
                     <HackerRank onClick={() => window.open("https://www.hackerrank.com/vibin24796")}/>
                 </div>
                 <div id="phone-number-copied-alert">Phone number copied to clipboard</div>
-                
+                <div id="message-sent-succesfully">I will get back to you at the earliest.</div>
+
                 <div className="scroll-buttons">
                     <div className="scroll scroll-up" onClick={scrollToPage}></div>
                     <div className="scroll scroll-up" onClick={scrollToPage}></div>

@@ -41,3 +41,11 @@ input::placeholder, textarea::placeholder{
     color: $placeholder-color;
     font-size: $input-size;
 }
+
+input[type="submit"]{
+    cursor: pointer;
+}
+
+input[type="submit"]:disabled{
+    cursor: not-allowed;
+}
