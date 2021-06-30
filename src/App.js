@@ -30,9 +30,10 @@ function App() {
         setPageHeader("initial", false);
       }
     }
+    scroll.pageNavigator(tabs);
     window.addEventListener("scroll", ()=>{
       togglePageHeader();
-      scroll.pageNavigator(tabs, headerState);
+      scroll.pageNavigator(tabs);
     })
   }, [])
 

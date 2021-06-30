@@ -11,9 +11,9 @@ export default function Home(props){
         <section className="home-page">
             <div>
                 <HomeInfo src="./images/MyFace.png"/>
-                <div className="scroll-down-buttons">
-                    <div className="scroll-down" onClick={scrollToPage}></div>
-                    <div className="scroll-down" onClick={scrollToPage}></div>
+                <div className="scroll-buttons">
+                    <div className="scroll scroll-down" onClick={scrollToPage}></div>
+                    <div className="scroll scroll-down" onClick={scrollToPage}></div>
                 </div>
             </div>
         </section>

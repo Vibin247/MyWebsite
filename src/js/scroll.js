@@ -3,10 +3,10 @@ function pageNavigator(tabs) {
     for (let index = 0; index < tabs.length; index++) {
         const currentTab = document.getElementById(tabs[index].name);
         const nextTab = tabs[index+1] ? document.getElementById(tabs[index+1].name) : { offsetTop : document.getElementsByTagName("body")[0].offsetHeight};
-        if(checkPosition > currentTab.offsetTop && checkPosition < nextTab.offsetTop){
-            if(checkPosition < currentTab.offsetTop + 50){
-                highlightTabName(tabs[index].name);
-            }
+        const top = currentTab.offsetTop;
+        const bottom = nextTab.offsetTop + (2*window.innerHeight/3);
+        if(checkPosition > top && checkPosition < bottom){
+            highlightTabName(tabs[index].name);
         }
     }
 }
@@ -22,7 +22,6 @@ function highlightTabName(name) {
 }
 
 function scrollToPage(pageid) {
-
     const scrollHeight = document.getElementById(pageid).offsetTop;
     window.scroll({
         top: scrollHeight,

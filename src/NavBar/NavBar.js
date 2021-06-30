@@ -6,6 +6,7 @@ export default function NavBar(props){
         const pageid = event.target.id.substr(0, event.target.id.indexOf("-"));
         scroll.scrollToPage(pageid);
     }
+
     return (
         <div className="nav-bar">
             {props.tabs.map((tab)=>(

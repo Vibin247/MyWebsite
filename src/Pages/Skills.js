@@ -20,19 +20,19 @@ export default function Skills() {
             }
         },
         {
-            name: "LESS",
-            component: SkillRatings,
-            props : { 
-                stars:4,
-                imagename:"LESS.svg"
-            }
-        },
-        {
             name: "SASS",
             component: SkillRatings,
             props : { 
                 stars:4,
                 imagename:"SASS.svg"
+            }
+        },
+        {
+            name: "LESS",
+            component: SkillRatings,
+            props : { 
+                stars:4,
+                imagename:"LESS.svg"
             }
         }
 
@@ -56,19 +56,19 @@ export default function Skills() {
             }
         },
         {
-            name: "JQuery",
-            component: SkillRatings,
-            props : { 
-                stars:3,
-                imagename:"JQuery.png"
-            }
-        },
-        {
             name: "React",
             component: SkillRatings,
             props : { 
                 stars:2 ,
                 imagename:"React.png"
+            }
+        },
+        {
+            name: "JQuery",
+            component: SkillRatings,
+            props : { 
+                stars:3,
+                imagename:"JQuery.png"
             }
         }
     ];
