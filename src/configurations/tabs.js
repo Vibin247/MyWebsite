@@ -29,5 +29,9 @@ export const tabs = [
       name:"contact",
       display:"Contact me",
       component: Contact
+    },
+    {
+      name:"resume",
+      display:"Resume"
     }
 ];
