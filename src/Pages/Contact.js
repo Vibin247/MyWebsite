@@ -62,7 +62,7 @@ export default function Contact(props) {
         <section className="contact">
             <div className="text-align-center tab-section">
                 <div className="content-header">Contact</div>
-                <div className="content">Want to know more?</div>
+                <div className="content tall-text-lines">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
                 <div className="content text-align-center">
                     <form id="contact-form" onSubmit={onFormSubmit}>
                         <input type="text" placeholder="Name" id="name"/>

@@ -214,8 +214,14 @@ section{
 #contact-form{
     width: 500px;
     margin: 0 auto;
-    *{
+    input, textarea{
         width: 100%;
+    }
+    input[type="submit"]{
+        width: 50%;
+        background-color: #6b73b7;
+        border-width: 2px;
+        color: #f9f9f9;
     }
 }
 
