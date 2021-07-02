@@ -35,6 +35,8 @@ function App() {
       togglePageHeader();
       scroll.pageNavigator(tabs);
     })
+
+    window.addEventListener("resize", setSectionsHeight);
   }, [])
 
   return (
