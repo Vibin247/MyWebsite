@@ -16,7 +16,7 @@ export default function NavBar(props){
             setTimeout(() => {
                 event.target.innerHTML = "Resume";
                 event.target.style.pointerEvents = "initial";
-            }, 1500);
+            }, 3000);
         }
         else{
             scroll.scrollToPage(pageid);

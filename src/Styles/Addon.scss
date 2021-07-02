@@ -167,7 +167,6 @@ section{
 
 .scroll-buttons{
     position: relative;
-    top: 150px;
     .scroll{
         position: absolute;
         left: 50%;
@@ -264,5 +263,15 @@ section{
         color: #f9f9f9;
         font-size: 18px;
         transition: 0.25s linear;
+    }
+}
+
+#resume-link{
+    border: 2px solid $secondary-color;
+    padding: 10px;
+    border-radius: 10px;
+    &:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
     }
 }
