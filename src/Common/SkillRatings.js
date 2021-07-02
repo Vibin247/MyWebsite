@@ -1,4 +1,3 @@
-import { ReactComponent as HTML } from "../SVGs/Logos/HTML.svg";
 export default function SkillRatings(props) {
 
     return (
