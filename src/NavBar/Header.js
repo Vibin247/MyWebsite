@@ -7,7 +7,7 @@ export default function Header(props){
             {props.headerState && (
                 <div className="nav-bar-row" id="nav-bar-row">
                     <div className="logo text-align-left">
-                        <img src="./images/MyFace.png" alt="Vibin" width="80px" height="80px"/>
+                        <img src="./images/MyFace.png" alt="Vibin" width="60px" height="60px"/>
                     </div>
                     <NavBar tabs={tabs}/>
                 </div>

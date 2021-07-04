@@ -35,13 +35,11 @@ body {
         display: flex;
         background-color: $header-bg;
         align-items: center;
-        line-height: 2;
         justify-content: space-between;
         .logo {
-            padding: 5px;
             vertical-align: middle;
             img{
-            border-radius: 50%;
+                border-radius: 50%;
             }
         }
         .nav-bar{
@@ -126,6 +124,9 @@ section{
 }
 
 @media only screen and (max-width: 450px) {
+    .page-header .nav-bar-row{
+        line-height: 2;   
+    }
     .home-page{
         .home-icon-wrapper{
             img{

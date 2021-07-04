@@ -90,7 +90,7 @@
     .skill-ratings-wrapper{
         display: flex;
         align-items: center;
-        overflow-x: scroll;
+        overflow-x: auto;
         .skill-ratings{
             box-sizing: border-box;
             min-width: 300px;
