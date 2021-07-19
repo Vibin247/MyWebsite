@@ -13,6 +13,7 @@ export default function Contact(props) {
     const [postingData, SetPostingData] = useState(false);
     const [PhoneMessageComponent, PhoneMessage, ShowPhoneMessage] = AlertMessage("phone", "Phone number copied to clipboard");
     const [PostMessageComponent, PostMessage, ShowPostMessage] = AlertMessage("messagepost", "I will get back to you at the earliest");
+    const [FormErrorComponent, FormError, ShowFormError] = AlertMessage("formerror", "Looks like you are not saying something");
 
     const phoneClick = () => {
         if (window.isMobile){
@@ -38,9 +39,14 @@ export default function Contact(props) {
         event.preventDefault();
         const formData = {};
         const formConfig = ["name","message","email_address"];
+        var error = false;
         formConfig.map((element) => {
-            return formData[element] =  document.getElementById(element).value;
+            return formData[element] =  document.getElementById(element).value !== "" ? document.getElementById(element).value : error = true;
         });
+        if(error){
+            ShowFormError();
+            return;
+        }
         SetPostingData(true);
         emailjs.send("gmail", apiKeys.tempalte_id, formData, apiKeys.user_id)
         .then(() => {
@@ -54,6 +60,7 @@ export default function Contact(props) {
         <section className="contact">
             <PhoneMessageComponent {...PhoneMessage}/>
             <PostMessageComponent {...PostMessage}/>
+            <FormErrorComponent {...FormError}/>
             <div className="text-align-center tab-section">
                 <div className="content-header">Contact</div>
                 <div className="content tall-text-lines">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>

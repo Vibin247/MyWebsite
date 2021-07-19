@@ -12,9 +12,5 @@ export default function AlertMessage(id, message) {
             document.getElementById(id).style.display = "none";
         }, 2500);
     };
-    return [AlertMessageRenderer, {
-        id:id,
-        message:message
-    },
-    ShowMessage];
+    return [AlertMessageRenderer, {id,message},ShowMessage];
 }
