@@ -1,27 +1,19 @@
 import emailjs from 'emailjs-com';
+import AlertMessage from '../Components/Common/AlertMessage';
 import { ReactComponent as Phone } from '../SVGs/phone.svg';
 import { ReactComponent as LinkedIn } from '../SVGs/linkedin.svg';
 import { ReactComponent as Github } from '../SVGs/github.svg';
 import { ReactComponent as HackerRank } from '../SVGs/hackerrank.svg';
-import scroll from "../js/scroll";
-import { apiKeys } from '../configurations/apikeys';
+import scroll from "../js/Navigation";
+import { apiKeys } from '../Configs/apikeys';
 import { useState } from 'react';
 
 export default function Contact(props) {
 
     const [postingData, SetPostingData] = useState(false);
+    const [PhoneMessageComponent, PhoneMessage, ShowPhoneMessage] = AlertMessage("phone", "Phone number copied to clipboard");
+    const [PostMessageComponent, PostMessage, ShowPostMessage] = AlertMessage("messagepost", "I will get back to you at the earliest");
 
-    const scrollToPage = () => {
-        scroll.scrollToPage(props.tabs[0].name);
-    };
-
-    const showAlert = (id) => {
-        document.getElementById(id).style.display = "block";
-        setTimeout(() => {
-            document.getElementById(id).style.display = "none";
-        }, 2500);
-        
-    };
     const phoneClick = () => {
         if (window.isMobile){
             const phoneNumberElement = document.createElement("a");
@@ -38,7 +30,7 @@ export default function Contact(props) {
             phoneNumberElement.select();
             document.execCommand('copy');
             document.body.removeChild(phoneNumberElement);
-            showAlert("phone-number-copied-alert");
+            ShowPhoneMessage();
         }
     };
     
@@ -54,12 +46,14 @@ export default function Contact(props) {
         .then(() => {
             SetPostingData(false);
             document.getElementById("contact-form").reset();
-            showAlert("message-sent-succesfully");
+            ShowPostMessage();
         });
     };
 
     return (
         <section className="contact">
+            <PhoneMessageComponent {...PhoneMessage}/>
+            <PostMessageComponent {...PostMessage}/>
             <div className="text-align-center tab-section">
                 <div className="content-header">Contact</div>
                 <div className="content tall-text-lines">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
@@ -77,12 +71,10 @@ export default function Contact(props) {
                     <Github onClick={() => window.open("https://github.com/Vibin247")}/>
                     <HackerRank onClick={() => window.open("https://www.hackerrank.com/vibin24796")}/>
                 </div>
-                <div id="phone-number-copied-alert">Phone number copied to clipboard</div>
-                <div id="message-sent-succesfully">I will get back to you at the earliest.</div>
 
                 <div className="scroll-buttons">
-                    <div className="scroll scroll-up" onClick={scrollToPage}></div>
-                    <div className="scroll scroll-up" onClick={scrollToPage}></div>
+                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
+                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
                 </div>
             </div>
         </section>

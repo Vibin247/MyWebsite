@@ -32,10 +32,18 @@ function scrollToPage(pageid) {
     }, 500);    
 }
 
+
+function scrollToTop(params) {
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });    
+}
 const scroll = {
     pageNavigator,
     highlightTabName,
-    scrollToPage
+    scrollToPage,
+    scrollToTop
 }
 
 export default scroll;

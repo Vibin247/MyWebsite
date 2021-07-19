@@ -1,8 +1,8 @@
-import Header from "./NavBar/Header";
-import PageContent from "./Common/PageContent";
+import Header from "./Components/NavBar/Header";
+import PageContent from "./Components/Common/PageContent";
 import { useEffect, useState } from "react";
-import { tabs } from "./configurations/tabs";
-import scroll from "./js/scroll";
+import { tabs } from "./Configs/tabs";
+import initalize from "./js/PageInit";
 import './Styles/Addon.scss';
 
 function App() {
@@ -14,14 +14,8 @@ function App() {
     document.getElementById("page-header").style.position = position;
   }
 
-  const setSectionsHeight = () => {
-    const sections = document.getElementsByTagName("section");
-    for (let index = 0; index < sections.length; index++) {
-      sections[index].style.minHeight = window.innerHeight + "px";
-    }
-  }
   useEffect(() => {
-    setSectionsHeight();
+    initalize(tabs);
     const togglePageHeader = () => {
       if(window.scrollY >= window.innerHeight-250){
         setPageHeader("fixed", true);
@@ -30,13 +24,9 @@ function App() {
         setPageHeader("initial", false);
       }
     }
-    scroll.pageNavigator(tabs);
     window.addEventListener("scroll", ()=>{
       togglePageHeader();
-      scroll.pageNavigator(tabs);
     })
-
-    window.addEventListener("resize", setSectionsHeight);
   }, [])
 
   return (

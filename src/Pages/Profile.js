@@ -1,4 +1,4 @@
-import DetailsTable from "../Common/DetailsTable";
+import DetailsTable from "../Components/Common/DetailsTable";
 
 export default function Profile(){
     const profileDetails = [

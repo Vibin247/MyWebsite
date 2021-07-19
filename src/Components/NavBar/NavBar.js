@@ -1,4 +1,4 @@
-import scroll from "./../js/scroll";
+import scroll from "./../../js/Navigation";
 import { Storage } from "aws-amplify";
 import ReactDOM from 'react-dom';
 import Loader from "../Common/Loader";

@@ -1,5 +1,5 @@
-import HomeInfo from "../Home/HomeInfo";
-import scroll from "../js/scroll";
+import HomeInfo from "../Components/Home/HomeInfo";
+import scroll from "../js/Navigation";
 
 export default function Home(props){
 

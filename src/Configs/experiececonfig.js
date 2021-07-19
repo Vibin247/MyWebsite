@@ -1,5 +1,5 @@
-import MDM from "../Professional/MDM";
-import ARW from "../Professional/ARW";
+import MDM from "../Components/Professional/Experiences/MDM";
+import ARW from "../Components/Professional/Experiences/ARW";
 
 const experiececonfig = [
     {

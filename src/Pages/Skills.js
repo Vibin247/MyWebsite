@@ -1,5 +1,5 @@
-import SkillRatings from "../Common/SkillRatings";
-import { markUpAndStyles, frontEndSkills, otherTechSkills } from "../configurations/skillsConfig";
+import SkillRatings from "../Components/Common/SkillRatings";
+import { markUpAndStyles, frontEndSkills, otherTechSkills } from "../Configs/skillsConfig";
 
 export default function Skills() {
 

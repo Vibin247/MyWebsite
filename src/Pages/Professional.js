@@ -1,5 +1,5 @@
-import Experience from "../Professional/Experience";
-import experiececonfig from "../configurations/experiececonfig";
+import Experience from "../Components/Professional/Experience";
+import experiececonfig from "../Configs/experiececonfig";
 import { useState } from "react";
 
 export default function Professional(){
