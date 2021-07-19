@@ -14,7 +14,7 @@ export default function AlertMessage(id, message) {
     };
     return [AlertMessageRenderer, {
         id:id,
-        message,message
+        message:message
     },
     ShowMessage];
 }
