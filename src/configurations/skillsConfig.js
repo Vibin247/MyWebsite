@@ -15,22 +15,18 @@ import { ReactComponent as Unity } from "../SVGs/Logos/Unity.svg";
 const markUpAndStyles = [
     {
         name: "HTML",
-        stars: 4,
         svgcomponent:HTML
     },
     {
         name: "CSS",
-        stars:4,
         svgcomponent: CSS3
     },
     {
         name: "SASS",
-        stars:4,
         svgcomponent: SASS
     },
     {
         name: "LESS",
-        stars:4,
         svgcomponent: LESS
     }
 ];
@@ -38,22 +34,18 @@ const markUpAndStyles = [
 const frontEndSkills = [
     {
         name: "Javascript",
-        stars: 4,
         svgcomponent: JS
     },
     {
         name: "Ember.js",
-        stars:4,
         svgcomponent: EmberSVG
     },
     {
         name: "React",
-        stars:2 ,
         svgcomponent: ReactSVG
     },
     {
         name: "JQuery",
-        stars:3,
         svgcomponent: Jquery
     }
 ];
@@ -61,27 +53,22 @@ const frontEndSkills = [
 const otherTechSkills = [
     {
         name: "C++",
-        stars:3 ,
         svgcomponent: Cpp
     },
     {
         name: "Java",
-        stars:3 ,
         svgcomponent: Java
     },
     {
         name: "PostgreSQL (SQL)",
-        stars:3 ,
         svgcomponent: Pgsql
     },
     {
         name: "Unity",
-        stars:3 ,
         svgcomponent: Unity
     },
     {
         name: "C#",
-        stars:2 ,
         svgcomponent: Csharp
     }
 ];
