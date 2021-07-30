@@ -32,7 +32,7 @@ export default function Profile(){
                     <div className="tall-text-lines text-center-justify text-align-left">
                         Enthusiastic Software Developer eager to contribute to team success through smart work, attention to detail and excellent problem-solving skills.
                         Self-motivated and natural programmer with 3 years of professional experience in web client development.
-                        Highly skilled in various programming languages, including but not limited to HTML, JavaScript, Ember.js
+                        Highly skilled in various programming languages, including but not limited to HTML, JavaScript, React.js
                     </div>
                 </div>
 
@@ -41,20 +41,20 @@ export default function Profile(){
 
                 <div className="sub-header">Favourite Quote</div>
                 <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
-                    <b>"Education is the most powerful weapon which you can use to change the world."</b> - <i>Nelson Mandela</i>
+                    <strong>"Education is the most powerful weapon which you can use to change the world."</strong> - <em>Nelson Mandela</em>
                 </div>
                 <div className="sub-header">Favourite Books</div>
                 <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
                     <div>
-                        <div><b>The Godfather</b> - <i>Mario Puzo</i></div>
-                        <div><b>Wiseguy: Life in a Mafia Family</b> - <i>Nicholas Pileggi</i></div>
+                        <div><strong>The Godfather</strong> - <em>Mario Puzo</em></div>
+                        <div><strong>Wiseguy: Life in a Mafia Family</strong> - <em>Nicholas Pileggi</em></div>
                     </div>
                 </div>
                 <div className="sub-header">Things I am passionate about</div>
                 <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
                     <div>
-                        <div><b>Video Games</b> - <i>Counter Strike Global Offensive | Withcer | Far Cry</i> <br/></div>
-                        <div><b>Movies</b> - <i>Mani Ratnam | Martin Scorsese | Zack Snyder</i></div>
+                        <div><strong>Video Games</strong> - <em>Counter Strike Global Offensive | Withcer | Far Cry</em> <br/></div>
+                        <div><strong>Movies</strong> - <em>Mani Ratnam | Martin Scorsese | Zack Snyder</em></div>
                     </div>
                 </div>
             </div>
