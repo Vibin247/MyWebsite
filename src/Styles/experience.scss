@@ -47,7 +47,7 @@
     }
 }
 
-.page-content > div:nth-child(odd)#professional{
+.page-content > .section-wrapper:nth-child(odd)#professional{
     .experience{
         border: 1px solid $even-section-bg;
         &:hover{
@@ -58,7 +58,7 @@
         }
     }
 }
-.page-content > div:nth-child(even)#professional{
+.page-content > .section-wrapper:nth-child(even)#professional{
     .experience{
         border: 1px solid $odd-section-bg;
         :hover{
@@ -70,12 +70,12 @@
     }
 }
 
-.page-content > div:nth-child(odd)#skills{
+.page-content > .section-wrapper:nth-child(odd)#skills{
     .skill-ratings-collection{
         border: 1px solid $even-section-bg;        
     }
 }
-.page-content > div:nth-child(even)#skills{
+.page-content > .section-wrapper:nth-child(even)#skills{
     .skill-ratings-collection{
         border: 1px solid $odd-section-bg;
     }

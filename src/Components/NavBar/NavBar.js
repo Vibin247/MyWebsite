@@ -41,10 +41,10 @@ export default function NavBar(props){
     }
 
     return (
-        <div className="nav-bar">
+        <nav className="nav-bar">
             {props.tabs.map((tab)=>(
                 <span id={tab.name + "-link"} key={tab.name} className="nav-bar-link" onClick={handleNavClick}>{tab.display}</span>
             ))}
-        </div>
+        </nav>
     );
 }
