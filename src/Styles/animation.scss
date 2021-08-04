@@ -1,0 +1,32 @@
+@keyframes horizontalToss {
+    0% {
+        transform: scale(1,1)    translateY(0) rotateY(0deg); 
+    }    
+    10%  { 
+        transform: scale(1.1,.9) translateY(0) rotateY(36deg); 
+    }
+    30%  { 
+        transform: scale(.9,1.1) translateY(-250px) rotateY(108deg); 
+    }
+    50%  { 
+        transform: scale(1,1)    translateY(100px) rotateY(180deg); 
+    }
+    57%  { 
+        transform: scale(.9,1.1)    translateY(-100px) rotateY(205.2deg); 
+    }
+    64%  { 
+        transform: scale(1.1,.9)    translateY(50px) rotateY(230.4deg); 
+    }
+    100% { 
+        transform: scale(1,1)    translateY(0) rotateY(360deg); 
+    }
+}
+
+@keyframes toss {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}

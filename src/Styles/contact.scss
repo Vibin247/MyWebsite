@@ -1,0 +1,37 @@
+#contact-form{
+    width: 500px;
+    margin: 0 auto;
+    input, textarea{
+        width: 100%;
+    }
+    input[type="submit"]{
+        width: 50%;
+        background-color: #6b73b7;
+        border-width: 2px;
+        color: #f9f9f9;
+    }
+}
+
+.contact-options{
+    margin: 0 auto;
+    margin-top: 50px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    svg{
+        fill: #fff;
+        margin: 0px 20px;
+        cursor: pointer;
+        transition: 0.25s linear;
+        width: 60px;
+        height: 60px;
+    }
+    svg:hover{
+        fill: #b9b9b9;
+        width: 75px;
+        height: 75px;
+
+    }
+}

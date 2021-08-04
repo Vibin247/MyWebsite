@@ -1,0 +1,102 @@
+.experience-wrapper{
+    margin: 50px 0px;
+}
+
+.experience-description{
+    min-height: 375px;
+    padding: 0px 15px;
+}
+
+.experience{
+    margin-right: 35px;
+    text-align: center;
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: $sub-header-font;
+    cursor: pointer;
+    > div{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .duration{
+        padding: 0px 25px;
+    }
+    .designation{
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        opacity: 0.9;
+        transition: 0.25s linear;
+    }
+    &:hover{
+        .designation{
+            top: 0px;
+        }
+    }
+    &:not( :hover){
+        .designation{
+            top: -350px;
+        }
+    }
+}
+
+.page-content > .section-wrapper:nth-child(odd)#professional{
+    .experience{
+        border: 1px solid $even-section-bg;
+        &:hover{
+            .designation{
+                background-color: $even-section-bg;
+                color: $even-section-font;
+            }
+        }
+    }
+}
+.page-content > .section-wrapper:nth-child(even)#professional{
+    .experience{
+        border: 1px solid $odd-section-bg;
+        :hover{
+            .designation{
+                background-color: $odd-section-bg;
+                color: $odd-section-font;
+            }
+        }
+    }
+}
+
+.page-content > .section-wrapper:nth-child(odd)#skills{
+    .skill-ratings-collection{
+        border: 1px solid $even-section-bg;        
+    }
+}
+.page-content > .section-wrapper:nth-child(even)#skills{
+    .skill-ratings-collection{
+        border: 1px solid $odd-section-bg;
+    }
+}
+.skill-ratings-collection{
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 20px;
+    .collection-heading{
+        margin-bottom: 20px;
+    }
+    .skill-ratings-wrapper{
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        .skill-ratings{
+            box-sizing: border-box;
+            min-width: 300px;
+            .skill-name{
+                margin-bottom: 15px;
+            }
+        }        
+    }
+}
