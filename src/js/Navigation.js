@@ -24,7 +24,7 @@ function highlightTabName(name) {
 function scrollToPage(pageid) {
     const scrollHeight = document.getElementById(pageid).offsetTop;
     window.scroll({
-        top: scrollHeight,
+        top: scrollHeight - 50,
         behavior: 'smooth'
     });
     setTimeout(() => {

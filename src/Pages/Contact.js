@@ -61,10 +61,10 @@ export default function Contact(props) {
             <PhoneMessageComponent {...PhoneMessage}/>
             <PostMessageComponent {...PostMessage}/>
             <FormErrorComponent {...FormError}/>
-            <div className="text-align-center tab-section">
+            <div className="tab-section" style={{textAlign:"center"}}>
                 <div className="content-header">Contact</div>
-                <div className="content tall-text-lines">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
-                <div className="content text-align-center">
+                <div className="content tall-text-lines padding-m">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
+                <div className="content">
                     <form id="contact-form" onSubmit={onFormSubmit}>
                         <input type="text" placeholder="Name" id="name"/>
                         <input type="text" placeholder="E-mail address" id="email_address"/>

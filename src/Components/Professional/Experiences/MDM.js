@@ -4,7 +4,7 @@ export default function MDM() {
             <div className="sub-header">
                 Member Technical Staff for Mobile Device Manager
             </div>
-            <div className="tall-text-lines text-center-justify text-align-left article">
+            <div className="tall-text-lines text-center-justify article">
                 <p>
                     My professional career started as one of the first members of the web client team of Mobile Device Manager. I started working on migrating the product to Ember. 
                     To do this I worked alongside back-end developers for the REST APIs and QA teams for testing and releasing the enhancements. The initial plan was to migrate the page as it is.

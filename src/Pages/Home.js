@@ -9,9 +9,9 @@ export default function Home(props){
 
     return (
         <section className="home-page">
-            <div>
+            <div className="tab-section">
                 <HomeInfo src="./images/MyFace.png"/>
-                <div className="scroll-buttons">
+                <div className="scroll-buttons" style={{marginTop:"75px"}}>
                     <div className="scroll scroll-down" onClick={scrollToPage}></div>
                     <div className="scroll scroll-down" onClick={scrollToPage}></div>
                 </div>

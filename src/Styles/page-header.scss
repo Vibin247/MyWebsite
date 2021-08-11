@@ -1,0 +1,33 @@
+.page-header{
+    background-color: $header-bg;
+    width: 100%;
+    min-width: 600px;
+    z-index: 20;
+    .nav-bar-row{
+        display: flex;
+        background-color: $header-bg;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            img{
+                border-radius: 50%;
+            }
+        }
+        .nav-bar{
+            font-size: 20px;
+            .nav-bar-link{
+                text-align: center;
+                max-width: 150px;
+                margin: 0px 20px;
+                color: $header-font-color;
+                cursor: pointer;
+            }
+            .nav-bar-link:hover{
+                color: $link-hover-color;                
+            }
+            .nav-bar-link.activeTab{
+                font-weight: 600;
+            }
+        }
+    }
+}

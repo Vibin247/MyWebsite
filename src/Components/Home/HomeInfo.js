@@ -1,6 +1,6 @@
 export default function HomeInfo(props){
     return (
-        <div className="home-info">
+        <div className="home-info  flex-box align-items-center">
             <div className="home-icon-wrapper">
                 <img src={props.src} alt="Vibin" width="200px" height="200px"/>
             </div>
