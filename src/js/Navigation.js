@@ -39,11 +39,11 @@ function scrollToTop(params) {
         behavior: 'smooth'
     });    
 }
-const scroll = {
+const navigator = {
     pageNavigator,
     highlightTabName,
     scrollToPage,
     scrollToTop
 }
 
-export default scroll;
+export default navigator;

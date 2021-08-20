@@ -40,9 +40,9 @@ body {
     color: $even-section-font;
 }
 
-.home-page{
-    .home-info{
-        .home-icon-wrapper{
+.welcome-page{
+    .welcome-info{
+        .welcome-icon-wrapper{
             animation: horizontalToss 1s linear;
             img{
                 width: 350px;
@@ -54,44 +54,24 @@ body {
 
         .description-tag{
             font-size: 35px;
-            margin-left: 75px;
             .greeting{
                 font-size: 60px;
                 margin-bottom: 10px;
             }
         }
+        & > div{
+            margin: auto 25px;
+        }
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .page-header .nav-bar-row{
-        line-height: 2;   
-    }
-    .home-page{
-        .home-icon-wrapper{
-            img{
-                width: 275px;
-                height: 275px;
-            }
-        }
-        .description-tag{
-            margin: 35px 0px;
-        }
+    .welcome-info.flex-box {
+        flex-direction: column;
     }
 }
 
-@media only screen and (min-width: 450px) {
-    .home-page{
-        .home-icon-wrapper{
-            width: 350px;
-            height: 350px;
-            vertical-align: middle;
-        }
-        .description-tag{
-            width: calc(100% - 400px);
-        }
-    }
-        
+@media only screen and (min-width: 450px) {        
 }
 
 .professional-page{

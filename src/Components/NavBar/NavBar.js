@@ -1,4 +1,4 @@
-import scroll from "./../../js/Navigation";
+import navigator from "./../../js/Navigation";
 import { Storage } from "aws-amplify";
 import ReactDOM from 'react-dom';
 import Loader from "../Common/Loader";
@@ -36,7 +36,7 @@ export default function NavBar(props){
             )
         }
         else{
-            scroll.scrollToPage(pageid);
+            navigator.scrollToPage(pageid);
         }
     }
 

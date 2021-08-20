@@ -4,7 +4,7 @@ import { ReactComponent as Phone } from '../SVGs/phone.svg';
 import { ReactComponent as LinkedIn } from '../SVGs/linkedin.svg';
 import { ReactComponent as Github } from '../SVGs/github.svg';
 import { ReactComponent as HackerRank } from '../SVGs/hackerrank.svg';
-import scroll from "../js/Navigation";
+import navigator from "../js/Navigation";
 import { apiKeys } from '../Configs/apikeys';
 import { useState } from 'react';
 
@@ -80,8 +80,8 @@ export default function Contact(props) {
                 </div>
 
                 <div className="scroll-buttons">
-                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
-                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
+                    <div className="scroll scroll-up" onClick={navigator.scrollToTop}></div>
+                    <div className="scroll scroll-up" onClick={navigator.scrollToTop}></div>
                 </div>
             </div>
         </section>

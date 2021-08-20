@@ -1,4 +1,4 @@
-import scroll from "./Navigation";
+import navigator from "./Navigation";
 
 const setSectionsHeight = () => {
     const sections = document.getElementsByTagName("section");
@@ -7,17 +7,30 @@ const setSectionsHeight = () => {
     }
 }
 
+const callPageNavigator = (tabs) => {
+    return () => { navigator.pageNavigator(tabs) };
+}
+
 const addEventListeners = (tabs) => {
     window.addEventListener("resize", setSectionsHeight);
-    window.addEventListener("scroll", ()=>{
-      scroll.pageNavigator(tabs);
-    })
-
+    window.addEventListener("scroll", callPageNavigator(tabs));
 }
+
+const removeEventListeners = (tabs) => {
+    window.removeEventListener("resize", setSectionsHeight);
+    window.removeEventListener("scroll", callPageNavigator(tabs));
+}
+
+const destroy = () =>{
+    removeEventListeners();
+}
+
 const initalize = (tabs) => {
     setSectionsHeight();
-    scroll.pageNavigator(tabs);
+    navigator.pageNavigator(tabs);
     addEventListeners(tabs);
 }
 
-export default initalize;
+const appHandler = { initalize, destroy };
+
+export default appHandler;

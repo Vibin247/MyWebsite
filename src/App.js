@@ -2,7 +2,7 @@ import Header from "./Components/NavBar/Header";
 import PageContent from "./Components/Common/PageContent";
 import { useEffect, useState } from "react";
 import { tabs } from "./Configs/tabs";
-import initalize from "./js/PageInit";
+import appHandler from "./js/PageInit";
 import './Styles/Addon.scss';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   }
 
   useEffect(() => {
-    initalize(tabs);
+    appHandler.initalize(tabs);
     const togglePageHeader = () => {
       if(window.scrollY >= window.innerHeight-250){
         setPageHeader("fixed", true);
@@ -24,9 +24,11 @@ function App() {
         setPageHeader("initial", false);
       }
     }
-    window.addEventListener("scroll", ()=>{
-      togglePageHeader();
-    })
+    window.addEventListener("scroll", togglePageHeader)
+    return () => {
+      window.removeEventListener("scroll", togglePageHeader);
+      appHandler.destroy();
+    }
   }, [])
 
   return (

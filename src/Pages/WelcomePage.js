@@ -1,16 +1,16 @@
-import HomeInfo from "../Components/Home/HomeInfo";
-import scroll from "../js/Navigation";
+import Welcome from "../Components/Welcome/Welcome";
+import navigator from "../js/Navigation";
 
-export default function Home(props){
+export default function WelcomePage(props){
 
     const scrollToPage = () => {
-        scroll.scrollToPage(props.tabs[1].name);
+        navigator.scrollToPage(props.tabs[1].name);
     };
 
     return (
-        <section className="home-page">
+        <section className="welcome-page">
             <div className="tab-section">
-                <HomeInfo src="./images/MyFace.png"/>
+                <Welcome src="./images/MyFace.png"/>
                 <div className="scroll-buttons" style={{marginTop:"75px"}}>
                     <div className="scroll scroll-down" onClick={scrollToPage}></div>
                     <div className="scroll scroll-down" onClick={scrollToPage}></div>

@@ -1,7 +1,7 @@
-export default function HomeInfo(props){
+export default function Welcome(props){
     return (
-        <div className="home-info  flex-box align-items-center">
-            <div className="home-icon-wrapper">
+        <div className="welcome-info flex-box align-items-center justify-content-space-between">
+            <div className="welcome-icon-wrapper">
                 <img src={props.src} alt="Vibin" width="200px" height="200px"/>
             </div>
             <div className="description-tag">

@@ -1,4 +1,4 @@
-import Home from "./../Pages/Home";
+import WelcomePage from "./../Pages/WelcomePage";
 import Profile from "./../Pages/Profile";
 import Professional from "./../Pages/Professional";
 import Skills from "../Pages/Skills";
@@ -8,7 +8,7 @@ export const tabs = [
     {
       name:"home",
       display:"Home",
-      component: Home
+      component: WelcomePage
     },
     {
       name:"profile",
