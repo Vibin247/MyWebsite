@@ -53,7 +53,7 @@ export default function Profile(){
                 <div className="sub-header">Things I am passionate about</div>
                 <div className="content text-align-left tall-text-lines" style={{fontSize:"22px"}}>
                     <div>
-                        <div><strong>Video Games</strong> - <em>Counter Strike Global Offensive | Withcer | Far Cry</em> <br/></div>
+                        <div><strong>Video Games</strong> - <em>Counter Strike Global Offensive | Witcher | Far Cry</em> <br/></div>
                         <div><strong>Movies</strong> - <em>Mani Ratnam | Martin Scorsese | Zack Snyder</em></div>
                     </div>
                 </div>
