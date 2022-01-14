@@ -2,7 +2,7 @@ export default function DetailsTable(props){
     return (
         <div className="content">
             {props.details.map((details) => (
-                <div key={details.name} className="details-row">
+                <div key={details.name} className="details-row disable-text-select">
                     <div className="detail-name">{details.name}</div>
                     {
                         details.component && (<details.component data={details.props}/>)

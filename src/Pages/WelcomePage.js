@@ -12,8 +12,8 @@ export default function WelcomePage(props){
             <div className="tab-section">
                 <Welcome src="./images/MyFace.png"/>
                 <div className="scroll-buttons" style={{marginTop:"75px"}}>
-                    <div className="scroll scroll-down" onClick={scrollToPage}></div>
-                    <div className="scroll scroll-down" onClick={scrollToPage}></div>
+                    <div className="scroll scroll-down disable-text-select" onClick={scrollToPage}></div>
+                    <div className="scroll scroll-down disable-text-select" onClick={scrollToPage}></div>
                 </div>
             </div>
         </section>
