@@ -30,8 +30,8 @@ export const tabs = [
       display:"Contact me",
       component: Contact
     },
-    {
-      name:"resume",
-      display:"Resume"
-    }
+    // {
+    //   name:"resume",
+    //   display:"Resume"
+    // }
 ];
