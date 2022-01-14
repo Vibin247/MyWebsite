@@ -25,7 +25,7 @@ export default function Professional(){
                         ))
                     }
                 </div>
-                <div className="experience-description">
+                <div className="experience-description disable-text-select ">
                     { selectedExperience && <selectedExperience.descriptionComponent/>}
                 </div>
             </div>

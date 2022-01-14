@@ -6,7 +6,7 @@ export default function Experience(props) {
     }
 
     return (
-        <div className="experience" onClick={handleClick}>
+        <div className="experience disable-text-select" onClick={handleClick}>
             <div className="duration">
                 {experience.duration}
             </div>
