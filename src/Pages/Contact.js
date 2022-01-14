@@ -4,7 +4,7 @@ import { ReactComponent as Phone } from '../SVGs/phone.svg';
 import { ReactComponent as LinkedIn } from '../SVGs/linkedin.svg';
 import { ReactComponent as Github } from '../SVGs/github.svg';
 import { ReactComponent as HackerRank } from '../SVGs/hackerrank.svg';
-import scroll from "../js/Navigation";
+import navigator from "../js/Navigation";
 import { apiKeys } from '../Configs/apikeys';
 import { useState } from 'react';
 
@@ -61,10 +61,10 @@ export default function Contact(props) {
             <PhoneMessageComponent {...PhoneMessage}/>
             <PostMessageComponent {...PostMessage}/>
             <FormErrorComponent {...FormError}/>
-            <div className="text-align-center tab-section">
+            <div className="tab-section" style={{textAlign:"center"}}>
                 <div className="content-header">Contact</div>
-                <div className="content tall-text-lines">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
-                <div className="content text-align-center">
+                <div className="content tall-text-lines padding-m">Are you looking for a web developer or just want to know more about me? <br/>Drop a message!</div>
+                <div className="content">
                     <form id="contact-form" onSubmit={onFormSubmit}>
                         <input type="text" placeholder="Name" id="name"/>
                         <input type="text" placeholder="E-mail address" id="email_address"/>
@@ -80,8 +80,8 @@ export default function Contact(props) {
                 </div>
 
                 <div className="scroll-buttons">
-                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
-                    <div className="scroll scroll-up" onClick={scroll.scrollToTop}></div>
+                    <div className="scroll scroll-up" onClick={navigator.scrollToTop}></div>
+                    <div className="scroll scroll-up" onClick={navigator.scrollToTop}></div>
                 </div>
             </div>
         </section>

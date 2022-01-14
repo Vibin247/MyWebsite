@@ -3,6 +3,7 @@ $secondary-color: #ffffff;
 $font-color: #ffffff;
 $secondary-font-color: #08083b;
 $text-size: 20px;
+$font-m: 22px;
 
 $header-bg: $primary-color;
 $header-font-color:$secondary-color;
@@ -37,3 +38,15 @@ $input-height: 35px;
 
 $placeholder-color: #aaaaaa;
 $input-size: 15px;
+
+*::-webkit-scrollbar, *::-webkit-scrollbar-thumb{
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+}
+*::-webkit-scrollbar{
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+}

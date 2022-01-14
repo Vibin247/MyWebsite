@@ -24,7 +24,7 @@ function highlightTabName(name) {
 function scrollToPage(pageid) {
     const scrollHeight = document.getElementById(pageid).offsetTop;
     window.scroll({
-        top: scrollHeight,
+        top: scrollHeight - 50,
         behavior: 'smooth'
     });
     setTimeout(() => {
@@ -39,11 +39,11 @@ function scrollToTop(params) {
         behavior: 'smooth'
     });    
 }
-const scroll = {
+const navigator = {
     pageNavigator,
     highlightTabName,
     scrollToPage,
     scrollToTop
 }
 
-export default scroll;
+export default navigator;

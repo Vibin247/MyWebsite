@@ -88,12 +88,14 @@
         margin-bottom: 20px;
     }
     .skill-ratings-wrapper{
-        display: flex;
-        align-items: center;
+        @extend .flex-box;
+        @extend .align-items-center;
         overflow-x: auto;
         .skill-ratings{
             box-sizing: border-box;
             min-width: 300px;
+            @extend .flex-column;
+            @extend .align-items-center;
             .skill-name{
                 margin-bottom: 15px;
             }

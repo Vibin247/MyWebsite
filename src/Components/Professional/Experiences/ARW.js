@@ -4,12 +4,12 @@ export default function ARW() {
             <div className="sub-header">
                 Member Technical Staff for Anti Ransomware
             </div>
-            <div className="tall-text-lines text-center-justify text-align-left article">
+            <div className="tall-text-lines text-center-justify article">
                 <p>
                     Post 2 years of working in Mobile Device Manager, I was presented with an opening that would see me as a client module owner. I saw this as a great learning opportunity
                     and decided to migrate to Anti Ransomware and Endpoint Detection &amp; Response.
                     This being a new product for Zoho Corporation, I started studying the current customer expectations and requirements based on existing EDR and Anti Ransomware Products.
-                    On completing this study, I narrowed down the scope of the web client for this product after the consultation with various product managers.
+                    On completing this study, I narrowed down the scope of the web client for the product under the guidance of various product managers.
                 </p>
 
                 <p>
