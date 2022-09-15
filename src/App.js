@@ -25,6 +25,11 @@ function App() {
       }
     }
     window.addEventListener("scroll", togglePageHeader)
+
+    if (window.clarity) {
+      window.clarity("identify", "12345")
+    }
+
     return () => {
       window.removeEventListener("scroll", togglePageHeader);
       appHandler.destroy();
