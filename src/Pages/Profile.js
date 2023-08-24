@@ -8,7 +8,7 @@ export default function Profile(){
         },
         {
             name: "Age/Gender",
-            value: "25/Male"
+            value: "27/Male"
         },
         {
             name: "Date of Birth",
